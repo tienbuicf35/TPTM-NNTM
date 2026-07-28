@@ -25,33 +25,35 @@
 
 # 1. Giới thiệu hệ thống
 
-Hệ thống **Chatbot hỗ trợ người dân chăm sóc cây trồng** là một ứng dụng ứng dụng trí tuệ nhân tạo (AI) nhằm hỗ trợ người dân tra cứu kiến thức nông nghiệp, tư vấn kỹ thuật chăm sóc cây trồng và giải đáp các câu hỏi liên quan đến sâu bệnh, phân bón, tưới tiêu cũng như các biện pháp canh tác.
+Hệ thống **Chatbot hỗ trợ người dân chăm sóc cây trồng** là ứng dụng sử dụng trí tuệ nhân tạo nhằm hỗ trợ người dân tra cứu kiến thức nông nghiệp, tư vấn kỹ thuật chăm sóc cây trồng và giải đáp các câu hỏi liên quan đến sâu bệnh, phân bón, tưới tiêu, thời vụ cũng như các biện pháp canh tác phù hợp.
 
-Chatbot hoạt động theo thời gian thực, giúp người dùng tiếp cận thông tin nhanh chóng thông qua giao diện trò chuyện thân thiện trên nền tảng Web.
+Hệ thống sử dụng mô hình ngôn ngữ lớn (LLM) kết hợp với cơ sở dữ liệu tri thức để cung cấp các câu trả lời chính xác, nhanh chóng và dễ hiểu. Người dùng chỉ cần nhập câu hỏi bằng ngôn ngữ tự nhiên, chatbot sẽ tự động phân tích và đưa ra câu trả lời phù hợp.
 
 Dự án được xây dựng bằng các công nghệ hiện đại:
 
-- **Flask** xây dựng Web Server và API.
-- **OpenAI API / Gemini API** xử lý hội thoại thông minh.
-- **FAISS** tìm kiếm ngữ nghĩa trong cơ sở tri thức.
-- **Sentence Transformers** tạo vector embedding.
-- **SQLite** lưu trữ dữ liệu người dùng và lịch sử hội thoại.
-- **HTML/CSS/JavaScript** xây dựng giao diện Web Chatbot.
+- **Flask** xây dựng Web Server và REST API.
+- **Google Gemini API** xử lý hội thoại thông minh.
+- **LangChain** quản lý luồng xử lý và kết nối mô hình AI.
+- **FAISS** lưu trữ và tìm kiếm dữ liệu theo ngữ nghĩa.
+- **Sentence Transformers** tạo vector embedding cho tài liệu.
+- **SQLite** lưu trữ lịch sử hội thoại và thông tin người dùng.
+- **HTML, CSS, Bootstrap, JavaScript** xây dựng giao diện Web.
 
 Hệ thống gồm hai chức năng chính:
 
-### 1. Chatbot tư vấn chăm sóc cây trồng
+### 1. Chatbot tư vấn cây trồng
 
-- Trả lời các câu hỏi về kỹ thuật chăm sóc cây trồng.
-- Tư vấn cách phòng và trị sâu bệnh.
-- Hướng dẫn sử dụng phân bón và thuốc bảo vệ thực vật hợp lý.
-- Đề xuất biện pháp chăm sóc theo từng giai đoạn sinh trưởng.
+- Trả lời câu hỏi về kỹ thuật chăm sóc cây.
+- Tư vấn phòng và điều trị sâu bệnh.
+- Hướng dẫn sử dụng phân bón.
+- Tư vấn tưới nước theo từng giai đoạn.
+- Đề xuất phương pháp canh tác phù hợp.
 
-### 2. Quản trị hệ thống
+### 2. Quản lý hệ thống
 
 - Quản lý lịch sử hội thoại.
 - Quản lý cơ sở dữ liệu tri thức.
-- Thống kê lượt truy cập và số lượng câu hỏi.
+- Thống kê số lượng người dùng và câu hỏi.
 - Cập nhật dữ liệu kiến thức mới.
 
 ---
@@ -60,64 +62,29 @@ Hệ thống gồm hai chức năng chính:
 
 - Python 3.10+
 - Flask
-- OpenAI API / Gemini API
+- Google Gemini API
+- LangChain
 - FAISS
 - Sentence Transformers
 - SQLite3
-- HTML
-- CSS
-- Bootstrap
+- HTML5
+- CSS3
+- Bootstrap 5
 - JavaScript
 
 ---
 
 # 3. Hình ảnh các chức năng
 
-## 1. Giao diện trang chủ Chatbot
+## 1. Giao diện Chatbot hỗ trợ người dân chăm sóc cây trồng
 
-*(Thêm hình giao diện chatbot tại đây)*
-
-```
-Ảnh: assets/home.png
-```
-
-*Giao diện trò chuyện giữa người dùng và chatbot.*
+<img width="1920" alt="Chatbot Interface" src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=1600&q=80"/>
 
 ---
 
-## 2. Chatbot tư vấn chăm sóc cây trồng
+## 2. Hệ thống tư vấn và hỗ trợ chăm sóc cây trồng
 
-*(Thêm hình chatbot trả lời người dùng)*
-
-```
-Ảnh: assets/chat.png
-```
-
-*Chatbot trả lời các câu hỏi về chăm sóc cây trồng.*
-
----
-
-## 3. Gợi ý biện pháp xử lý sâu bệnh
-
-*(Thêm hình minh họa)*
-
-```
-Ảnh: assets/disease.png
-```
-
-*Hệ thống đưa ra nguyên nhân và biện pháp phòng trừ.*
-
----
-
-## 4. Trang quản trị dữ liệu
-
-*(Thêm hình dashboard quản trị)*
-
-```
-Ảnh: assets/admin.png
-```
-
-*Quản lý dữ liệu và thống kê hệ thống.*
+<img width="1920" alt="Agriculture AI" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1600&q=80"/>
 
 ---
 
@@ -136,6 +103,8 @@ cd crop-chatbot
 ```bash
 python -m venv venv
 ```
+
+Kích hoạt môi trường:
 
 Windows
 
@@ -159,15 +128,9 @@ pip install -r requirements.txt
 
 ---
 
-## Bước 4: Cấu hình API Key
+## Bước 4: Cấu hình API
 
 Tạo file `.env`
-
-```env
-OPENAI_API_KEY=YOUR_API_KEY
-```
-
-Hoặc
 
 ```env
 GOOGLE_API_KEY=YOUR_API_KEY
@@ -175,7 +138,7 @@ GOOGLE_API_KEY=YOUR_API_KEY
 
 ---
 
-## Bước 5: Chạy chương trình
+## Bước 5: Chạy hệ thống
 
 ```bash
 python app.py
@@ -186,7 +149,7 @@ python app.py
 ## Bước 6: Truy cập giao diện Web
 
 ```
-http://localhost:5000
+http://127.0.0.1:5000
 ```
 
 ---
@@ -197,13 +160,17 @@ http://localhost:5000
 crop-chatbot/
 │
 ├── app.py
-├── config.py
 ├── chatbot.py
+├── config.py
 ├── database.py
 ├── embeddings.py
 ├── vector_store.py
 ├── requirements.txt
 ├── .env
+│
+├── data/
+│   ├── knowledge.pdf
+│   └── vector_db/
 │
 ├── static/
 │   ├── css/
@@ -212,12 +179,8 @@ crop-chatbot/
 │
 ├── templates/
 │   ├── index.html
-│   ├── chat.html
-│   └── admin.html
-│
-├── data/
-│   ├── knowledge.pdf
-│   └── vector_db/
+│   ├── admin.html
+│   └── chat.html
 │
 ├── uploads/
 │
@@ -229,19 +192,19 @@ crop-chatbot/
 # 6. API Endpoints
 
 | Method | Endpoint | Mô tả |
-|---------|----------|-------|
+|---------|----------|------|
 | GET | / | Trang chủ |
-| GET | /chat | Giao diện Chatbot |
-| POST | /api/chat | Gửi câu hỏi |
+| GET | /chat | Giao diện chatbot |
+| POST | /api/chat | Gửi câu hỏi tới chatbot |
 | GET | /history | Lịch sử hội thoại |
 | GET | /admin | Trang quản trị |
-| GET | /api/statistics | Thống kê |
+| GET | /api/statistics | Thống kê hệ thống |
 
 ---
 
 # 7. Quy trình hoạt động
 
-```
+```text
 Người dùng
       │
       ▼
@@ -251,42 +214,43 @@ Giao diện Web
 Flask Server
       │
       ▼
-Vector Database (FAISS)
+Xử lý câu hỏi
       │
       ▼
-Embedding Search
+FAISS Vector Database
       │
       ▼
-LLM (OpenAI/Gemini)
+Gemini API
       │
       ▼
 Sinh câu trả lời
       │
       ▼
-Hiển thị cho người dùng
+Hiển thị kết quả cho người dùng
 ```
 
 ---
 
 # 8. Kết quả đạt được
 
-- Xây dựng chatbot hỗ trợ người dân chăm sóc cây trồng.
-- Trả lời nhanh các câu hỏi về nông nghiệp.
+- Xây dựng thành công chatbot hỗ trợ chăm sóc cây trồng.
+- Trả lời tự động các câu hỏi về nông nghiệp bằng tiếng Việt.
 - Hỗ trợ tra cứu kiến thức theo ngữ nghĩa.
-- Giao diện trực quan, dễ sử dụng.
+- Giao diện trực quan, thân thiện với người dùng.
 - Quản lý lịch sử hội thoại.
-- Có khả năng mở rộng cơ sở dữ liệu tri thức.
+- Dễ dàng mở rộng cơ sở tri thức và tích hợp thêm nhiều loại cây trồng.
 
 ---
 
 # 9. Hướng phát triển
 
-- Hỗ trợ nhận diện bệnh cây từ hình ảnh.
-- Tích hợp giọng nói (Speech to Text).
+- Nhận diện bệnh cây từ hình ảnh bằng AI.
+- Tích hợp nhận dạng giọng nói.
 - Hỗ trợ nhiều loại cây trồng hơn.
-- Tích hợp dữ liệu thời tiết.
-- Khuyến nghị lịch chăm sóc cây theo mùa vụ.
+- Tích hợp dữ liệu thời tiết theo khu vực.
+- Gợi ý lịch chăm sóc cây theo mùa vụ.
 - Triển khai trên nền tảng Cloud.
+- Phát triển ứng dụng trên Android và iOS.
 
 ---
 
