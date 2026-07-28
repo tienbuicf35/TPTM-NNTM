@@ -256,7 +256,7 @@ Hiển thị kết quả cho người dùng
 
 # 10. Thông tin liên hệ
 
-**Tác giả:** *Tên của bạn*
+**Tác giả:** *Bùi Văn Tiến*
 
 **GitHub:** https://github.com/your-github
 
