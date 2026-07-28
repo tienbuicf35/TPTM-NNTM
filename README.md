@@ -78,13 +78,13 @@ Hệ thống gồm hai chức năng chính:
 
 ## 1. Giao diện Chatbot hỗ trợ người dân chăm sóc cây trồng
 
-<img width="1920" alt="Chatbot Interface" src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=1600&q=80"/>
-
+<img width="1350" height="336" alt="Ảnh chụp màn hình 2026-07-28 232726" src="https://github.com/user-attachments/assets/bd4f9384-5f91-41e7-b8c3-6e9f1587c276" />
 ---
 
 ## 2. Hệ thống tư vấn và hỗ trợ chăm sóc cây trồng
 
-<img width="1920" alt="Agriculture AI" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1600&q=80"/>
+<img width="1365" height="828" alt="image" src="https://github.com/user-attachments/assets/7bd32420-58f9-4d49-a59a-9be0bb6746db" />
+
 
 ---
 
